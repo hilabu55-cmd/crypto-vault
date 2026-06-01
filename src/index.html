@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔥 CryptoVault - Bitcoin Trading Simulator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+    }
+
+    .accent-orange {
+      color: #ff8c00;
+    }
+
+    .bg-accent-orange {
+      background-color: #ff8c00;
+    }
+
+    .border-accent-orange {
+      border-color: #ff8c00;
+    }
+
+    .hover-accent:hover {
+      background-color: #ff8c00;
+      color: #000000;
+    }
+
+    .glass {
+      background: rgba(255, 140, 0, 0.1);
+      border: 1px solid rgba(255, 140, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+    }
+
+    .glass-dark {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 140, 0, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ff8c00 0%, #ffb347 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 300px;
+      margin: 20px 0;
+    }
+
+    .pulse-orange {
+      animation: pulse-orange 2s infinite;
+    }
+
+    @keyframes pulse-orange {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.7); }
+      50% { box-shadow: 0 0 0 10px rgba(255, 140, 0, 0); }
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #ff8c00 !important;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="./App.jsx"></script>
+</body>
+</html>
